@@ -1,0 +1,10 @@
+SYNTAX:
+SELECT columns
+FROM table_1, table_2,...table_n
+WHERE condition; 
+
+SELECT student.stu_id, student.stu_name,
+student.branch, subjects, max_credits
+FROM student, branch_details, credit_details
+WHERE student.branch = branch_details.branch_name AND 
+branch_details.branch_name = credit_details.branch;
